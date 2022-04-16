@@ -1,6 +1,8 @@
+import Pagination from "components/Pagination/pagination"
+
 function Listing(){
     return(
-        <h1>Tela de listagem</h1>
+        <Pagination/>
     )
 
 }
