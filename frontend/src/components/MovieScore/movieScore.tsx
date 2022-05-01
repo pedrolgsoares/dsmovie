@@ -1,13 +1,16 @@
+import { type } from "@testing-library/user-event/dist/type";
 import MovieStars from "components/MovieStars/movieStars"
 import './movieScore.css'
 
-function MovieScore() {
-    var score = 3;
-    var count = 25
+type Props ={
+    score: number;
+    count: number
+}
+function MovieScore({score, count}: Props) {
     return (
         <div className="dsmovie-score-container">
             <p className="dsmovie-score-value">{score > 0 ? score.toFixed(1) : '-'}</p>
-            <MovieStars />
+            <MovieStars score={score} />
             <p className="dsmovie-score-count">{count} avaliações</p>
         </div>
     )
